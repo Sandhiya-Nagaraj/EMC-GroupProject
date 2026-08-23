@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+
+/* ================= BODY ================= */
+
+body {
+    min-height: 100vh;
+    background: #f8f8f8;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    padding: 8px 0 0 8%;
+}
+
+.logo img {
+    width: 75px;
+    height: auto;
+    display: block;
+}
+
+
+/* ================= MAIN CONTAINER ================= */
+
+.login-container {
+    width: 960px;
+    min-height: 590px;
+    margin: 85px auto 40px;
+
+    display: flex;
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid #dddddd;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================= LEFT SIDE ================= */
+
+.login-left {
+    width: 58%;
+    padding: 58px 30px 50px;
+}
+
+
+.login-left h1 {
+    text-align: center;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    margin-bottom: 48px;
+
+    color: #202020;
+}
+
+
+/* ================= INPUT GROUP ================= */
+
+.input-group {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+.input-group label {
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+
+    color: #333;
+}
+
+
+.input-group label span {
+    color: #e24b36;
+}
+
+
+.input-group input {
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid #d2d2d2;
+
+    border-radius: 10px;
+
+    padding: 0 12px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    color: #333;
+
+    transition: 0.3s;
+}
+
+
+.input-group input::placeholder {
+    color: #9b9b9b;
+}
+
+
+.input-group input:focus {
+    border-color: #3562bb;
+
+    box-shadow: 0 0 0 3px rgba(53, 98, 187, 0.08);
+}
+
+
+/* ================= PASSWORD ================= */
+
+.password-input {
+    position: relative;
+}
+
+
+.password-input input {
+    padding-right: 45px;
+}
+
+
+.password-input i {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #777;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+/* ================= FORGOT PASSWORD ================= */
+
+.forgot-section {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 5px;
+    margin-bottom: 32px;
+}
+
+
+.forgot-section a {
+    text-decoration: none;
+
+    font-size: 13px;
+
+    color: #77808c;
+}
+
+
+.forgot-section .otp {
+    color: #345da9;
+}
+
+
+/* ================= SIGN IN BUTTON ================= */
+
+.signin-btn {
+    width: 100%;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        90deg,
+        #345bad,
+        #2e58b6
+    );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.signin-btn:hover {
+    opacity: 0.95;
+
+    transform: translateY(-1px);
+}
+
+
+/* ================= CREATE ACCOUNT ================= */
+
+.create-account {
+    text-align: right;
+
+    margin-top: 18px;
+    margin-bottom: 24px;
+
+    font-size: 13px;
+
+    color: #77808c;
+}
+
+
+.create-account a {
+    color: #315ca9;
+
+    text-decoration: underline;
+}
+
+
+/* ================= GOOGLE BUTTON ================= */
+
+.google-btn {
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid #d2d2d2;
+
+    border-radius: 10px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    color: #333;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.google-btn:hover {
+    background: #f7f7f7;
+}
+
+
+/* GOOGLE IMAGE SIZE FIX */
+
+.google-btn img {
+    width: 20px !important;
+    height: 20px !important;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+}
+
+
+/* ================= RIGHT SIDE ================= */
+
+.login-right {
+    width: 42%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #3199c5 0%,
+        #4562d4 100%
+    );
+
+    border-radius: 0 18px 18px 0;
+}
+
+
+/* ================= TESTIMONIAL ================= */
+
+.testimonial {
+    width: 300px;
+
+    padding: 14px 20px 10px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.testimonial p {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1.65;
+
+    color: #18232f;
+
+    margin-bottom: 12px;
+}
+
+
+.testimonial img {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    border: 3px solid #f5b6c2;
+
+    object-fit: cover;
+
+    margin-bottom: 5px;
+}
+
+
+.testimonial h3 {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #1e2a36;
+}
+
+
+/* ================= TABLET RESPONSIVE ================= */
+
+@media screen and (max-width: 1000px) {
+
+    .login-container {
+        width: 90%;
+    }
+
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media screen and (max-width: 768px) {
+
+    .logo {
+        padding: 15px 20px;
+    }
+
+
+    .logo img {
+        width: 65px;
+    }
+
+
+    .login-container {
+        width: 92%;
+
+        min-height: auto;
+
+        margin: 40px auto;
+
+        display: block;
+
+        border-radius: 15px;
+    }
+
+
+    .login-left {
+        width: 100%;
+
+        padding: 40px 25px 45px;
+    }
+
+
+    /* MOBILE LA RIGHT SIDE HIDE */
+
+    .login-right {
+        display: none;
+    }
+
+
+    .login-left h1 {
+        font-size: 26px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .forgot-section {
+        margin-bottom: 28px;
+    }
+
+
+    .create-account {
+        text-align: center;
+    }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media screen and (max-width: 480px) {
+
+    .login-container {
+        width: 94%;
+
+        margin-top: 25px;
+    }
+
+
+    .login-left {
+        padding: 35px 18px 40px;
+    }
+
+
+    .login-left h1 {
+        font-size: 24px;
+    }
+
+
+    .forgot-section a {
+        font-size: 12px;
+    }
+
+
+    .google-btn {
+        font-size: 13px;
+    }
+
+
+    .google-btn img {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+}
