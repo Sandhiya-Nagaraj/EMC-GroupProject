@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="Payment-Style.css">
+</head>
+<body>
+
+    <div class="payment-page">
+
+        <div class="payment-left">
+
+            <div class="payment-brand">
+
+                <div class="emc-logo">
+                    emc
+                </div>
+
+                <strong>
+                    Errormakesclever
+                </strong>
+
+            </div>
+
+            <div class="payable">
+
+                <div>
+                    <p>Total Payable</p>
+                    <h2>₹2999</h2>
+                </div>
+
+                <span>⌄</span>
+
+            </div>
+
+            <div class="available-offers">
+
+                <p class="offer-heading">
+                    AVAILABLE OFFERS
+                </p>
+
+                <div class="offer">
+
+                    <div class="offer-icon">
+                    </div>
+
+                    <div class="offer-content">
+
+                        <strong>
+                            Assured savings upto 1.5%
+                        </strong>
+
+                        <b>
+                            APPLY
+                        </b>
+
+                        <p>
+                            using NeuCard
+                        </p>
+
+                        <small>
+                            | T&C
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="secure-checkout">
+
+                <strong>
+                    pay<span>u</span>
+                </strong>
+
+                <small>
+                    Secure Checkout 
+                </small>
+
+            </div>
+
+            <div class="transaction-id">
+                Transaction ID:
+                EMC_PAYU_AUG_20_2026_10_28_2880568
+            </div>
+
+        </div>
+
+        <div class="payment-right">
+
+            <div class="payment-header">
+
+                <button
+                    class="payment-back"
+                    onclick="goBackToReview()"
+                >
+                    ‹ Back
+                </button>
+
+                <h2>
+                    Checkout
+                </h2>
+
+                <div class="profile">
+                    👤⌄
+                </div>
+
+            </div>
+
+            <div class="payment-options">
+
+                <p class="all-payment">
+                    ALL PAYMENT OPTIONS
+                </p>
+
+                <div class="payment-method">
+
+                    <button
+                        class="method-title"
+                        onclick="togglePayment('upi')"
+                    >
+
+                        <span>
+                            UPI
+                        </span>
+
+                        <span class="payment-icons">
+                            <?xml version="1.0" encoding="utf-8"?>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <i class="fa-brands fa-google-pay"></i>
+
+                        </span>
+
+                    </button>
+
+                    <div
+                        class="method-content"
+                        id="upi"
+                    >
+
+                        <h3>
+                            Pay using UPI
+                        </h3>
+
+                        <input
+                            type="text"
+                            id="upiId"
+                            placeholder="Enter UPI ID"
+                        >
+
+                        <button
+                            onclick="payUPI()"
+                        >
+                            Verify & Pay ₹2999
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="payment-method">
+
+                    <button
+                        class="method-title"
+                        onclick="togglePayment('card')"
+                    >
+
+                        <span>
+
+                            Cards
+                            <small>
+                                (Credit/Debit)
+                            </small>
+
+                            <em>
+                                ● Offer
+                            </em>
+
+                        </span>
+
+                        <span class="card-symbol">
+                            ▣
+                        </span>
+
+                    </button>
+
+                    <div
+                        class="method-content"
+                        id="card"
+                    >
+
+                        <h3>
+                            Enter Card Details
+                        </h3>
+
+                        <input
+                            type="text"
+                            id="cardNumber"
+                            placeholder="Card Number"
+                            maxlength="19"
+                        >
+
+                        <input
+                            type="text"
+                            id="cardName"
+                            placeholder="Name on Card"
+                        >
+
+                        <div class="card-row">
+
+                            <input
+                                type="text"
+                                id="expiry"
+                                placeholder="MM/YY"
+                                maxlength="5"
+                            >
+
+                            <input
+                                type="password"
+                                id="cvv"
+                                placeholder="CVV"
+                                maxlength="3"
+                            >
+
+                        </div>
+
+                        <button
+                            onclick="payCard()"
+                        >
+                            Pay ₹2999
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="payment-method">
+
+                    <button
+                        class="method-title"
+                        onclick="togglePayment('netbanking')"
+                    >
+
+                        <span>
+                            Net Banking
+                        </span>
+
+                        <span class="payment-icons">
+                        </span>
+
+                    </button>
+
+                    <div
+                        class="method-content"
+                        id="netbanking"
+                    >
+
+                        <h3>
+                            Select Your Bank
+                        </h3>
+
+                        <select id="bank">
+
+                            <option value="">
+                                Select Bank
+                            </option>
+
+                            <option value="SBI">
+                                State Bank of India
+                            </option>
+
+                            <option value="HDFC">
+                                HDFC Bank
+                            </option>
+
+                            <option value="ICICI">
+                                ICICI Bank
+                            </option>
+
+                            <option value="Axis">
+                                Axis Bank
+                            </option>
+
+                            <option value="Kotak">
+                                Kotak Mahindra Bank
+                            </option>
+
+                        </select>
+
+                        <button onclick="payBank()">
+                            Continue ₹2999
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="payment-method">
+
+                    <button
+                        class="method-title"
+                        onclick="togglePayment('wallet')"
+                    >
+
+                        <span>
+                            Wallet
+                        </span>
+
+                        <span class="payment-icons">
+                        </span>
+
+                    </button>
+
+                    <div
+                        class="method-content"
+                        id="wallet"
+                    >
+
+                        <h3>
+                            Select Wallet
+                        </h3>
+
+                        <label class="wallet-option">
+                            <input
+                                type="radio"
+                                name="wallet"
+                                value="Paytm"
+                            >
+                            Paytm
+                        </label>
+
+                        <label class="wallet-option">
+                            <input
+                                type="radio"
+                                name="wallet"
+                                value="Mobikwik"
+                            >
+                            Mobikwik
+                        </label>
+
+                        <label class="wallet-option">
+                            <input
+                                type="radio"
+                                name="wallet"
+                                value="Amazon Pay"
+                            >
+                            Amazon Pay
+                        </label>
+
+                        <button onclick="payWallet()">
+                            Continue ₹2999
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="payment-method">
+
+                    <button
+                        class="method-title"
+                        onclick="togglePayment('emi')"
+                    >
+
+                        <span>
+                            EMI
+                        </span>
+
+                        <span class="card-symbol">
+                            EMI
+                        </span>
+
+                    </button>
+
+                    <div
+                        class="method-content"
+                        id="emi"
+                    >
+
+                        <h3>
+                            EMI Options
+                        </h3>
+
+                        <p>
+                            Choose your preferred bank and EMI plan.
+                        </p>
+
+                        <select>
+
+                            <option>
+                                Select Bank
+                            </option>
+
+                            <option>
+                                HDFC Bank
+                            </option>
+
+                            <option>
+                                ICICI Bank
+                            </option>
+
+                            <option>
+                                Axis Bank
+                            </option>
+
+                        </select>
+
+                        <button
+                            onclick="showMessage('EMI option selected')"
+                        >
+                            Continue
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="payment-method">
+
+                    <button
+                        class="method-title"
+                        onclick="togglePayment('paylater')"
+                    >
+
+                        <span>
+                            Pay Later
+                        </span>
+
+                        <span class="paylater-icon">
+                        </span>
+
+                    </button>
+
+                    <div
+                        class="method-content"
+                        id="paylater"
+                    >
+
+                        <h3>
+                            Pay Later
+                        </h3>
+
+                        <p>
+                            Choose a supported Pay Later service.
+                        </p>
+
+                        <button
+                            onclick="showMessage('Pay Later selected')"
+                        >
+                            Continue
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="payment-method">
+
+                    <button
+                        class="method-title"
+                        onclick="togglePayment('rewards')"
+                    >
+
+                        <span>
+                            Pay By Rewards
+                        </span>
+
+                        <span class="rewards-icon">
+                            TW
+                        </span>
+
+                    </button>
+
+                    <div
+                        class="method-content"
+                        id="rewards"
+                    >
+
+                        <p>
+                            You currently have no eligible rewards.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="payment-footer">
+
+        <label>
+
+            <input type="checkbox">
+
+            By proceeding, I agree to
+            <a href="#">
+                PayU Payments Privacy Policy
+            </a>
+            /
+            <a href="#">
+                Manage Consent
+            </a>.
+
+        </label>
+
+        <div class="security-icons">
+            <span>Verified VISA</span>
+            <span>MasterCard</span>
+            <span>RuPay</span>
+            <span>PCI DSS</span>
+        </div>
+
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="Payment-Script.js"></script>
+
+</body>
+</html>

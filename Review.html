@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Order</title>
+    <link rel="stylesheet" href="Payment-Style.css">
+</head>
+<body>
+
+    <div class="review-page">
+
+        <div class="site-logo">
+            <div class="logo-symbol">EC</div>
+            <span>Error Makes Clever</span>
+        </div>
+
+        <div class="review-container">
+
+            <button class="back-link" onclick="goBack()">
+                ← Back
+            </button>
+
+            <div class="order-card">
+
+                <h3>Review Order</h3>
+
+                <div class="divider"></div>
+
+                <div class="course-details">
+
+                    <img
+                        src="https://via.placeholder.com/100x75"
+                        alt="Python Course"
+                        class="course-image"
+                    >
+
+                    <div class="course-info">
+
+                        <span class="webinar">
+                            WEBINAR
+                        </span>
+
+                        <h2>
+                            Master Python With AI - B03
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <h4 class="summary-heading">
+                    Summary
+                </h4>
+
+                <div class="summary">
+
+                    <div class="summary-row">
+                        <span>Original Price</span>
+                        <span>₹5999</span>
+                    </div>
+
+                    <div class="summary-row discount">
+                        <span>Discount</span>
+                        <span>-₹3000</span>
+                    </div>
+
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <strong>₹2999</strong>
+                    </div>
+
+                </div>
+
+                <div class="location-form">
+
+                    <div class="input-group">
+                        <label>* Country</label>
+
+                        <select id="country">
+                            <option value="">Select country</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">UK</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>* State</label>
+
+                        <select id="state">
+                            <option value="">Select state</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>* City</label>
+
+                        <select id="city">
+                            <option value="">Select city</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Coimbatore">Coimbatore</option>
+                            <option value="Madurai">Madurai</option>
+                            <option value="Bangalore">Bangalore</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                    >
+
+                    <label for="terms">
+                        I agree with the
+                        <a href="#">
+                            Terms & Conditions
+                        </a>
+                    </label>
+
+                </div>
+
+                <button
+                    class="coupon-link"
+                    onclick="toggleCoupon()"
+                >
+                    Have a Coupon Code?
+                </button>
+
+                <div
+                    class="coupon-area"
+                    id="couponArea"
+                >
+
+                    <input
+                        type="text"
+                        id="coupon"
+                        placeholder="Enter coupon code"
+                    >
+
+                    <button onclick="applyCoupon()">
+                        Apply
+                    </button>
+
+                </div>
+
+                <button
+                    class="make-payment"
+                    onclick="makePayment()"
+                >
+                    Make Payment
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="Payment-Script.js"></script>
+
+</body>
+</html>
