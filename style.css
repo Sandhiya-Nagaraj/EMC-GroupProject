@@ -2,61 +2,56 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-
-/* ================= BODY ================= */
-
 body {
+    background-color: #f8f8fa;
     min-height: 100vh;
-    background: #f8f8f8;
 }
 
 
 /* ================= LOGO ================= */
 
-.logo {
-    padding: 8px 0 0 8%;
+.logo-section {
+    padding: 10px 11%;
 }
 
-.logo img {
-    width: 75px;
+.logo-section img {
+    width: 70px;
     height: auto;
-    display: block;
 }
 
 
-/* ================= MAIN CONTAINER ================= */
+/* ================= LOGIN CONTAINER ================= */
 
 .login-container {
     width: 960px;
     min-height: 590px;
-    margin: 85px auto 40px;
+
+    margin: 80px auto 0;
 
     display: flex;
 
-    background: white;
+    background-color: white;
 
-    border-radius: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 25px;
 
     overflow: hidden;
 
-    border: 1px solid #dddddd;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 
 /* ================= LEFT SIDE ================= */
 
-.login-left {
+.login-form {
     width: 58%;
-    padding: 58px 30px 50px;
+    padding: 60px 30px;
 }
 
-
-.login-left h1 {
+.login-form h1 {
     text-align: center;
 
     font-size: 28px;
@@ -64,119 +59,92 @@ body {
 
     margin-bottom: 48px;
 
-    color: #202020;
+    color: #111827;
 }
 
 
-/* ================= INPUT GROUP ================= */
+/* ================= LABEL ================= */
 
-.input-group {
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-
-.input-group label {
+label {
     display: block;
 
-    font-size: 14px;
+    font-size: 16px;
+    color: #1f2937;
 
     margin-bottom: 10px;
+}
 
-    color: #333;
+label span {
+    color: red;
 }
 
 
-.input-group label span {
-    color: #e24b36;
-}
+/* ================= INPUT ================= */
 
-
-.input-group input {
+.login-form input {
     width: 100%;
     height: 40px;
 
-    border: 1px solid #d2d2d2;
-
-    border-radius: 10px;
-
     padding: 0 12px;
 
-    font-size: 14px;
+    border: 1px solid #cfd3d8;
+    border-radius: 10px;
+
+    font-size: 16px;
 
     outline: none;
 
-    color: #333;
-
-    transition: 0.3s;
+    margin-bottom: 30px;
 }
 
-
-.input-group input::placeholder {
-    color: #9b9b9b;
-}
-
-
-.input-group input:focus {
-    border-color: #3562bb;
-
-    box-shadow: 0 0 0 3px rgba(53, 98, 187, 0.08);
+.login-form input::placeholder {
+    color: #9ca3af;
 }
 
 
 /* ================= PASSWORD ================= */
 
-.password-input {
+.password-box {
     position: relative;
 }
 
-
-.password-input input {
-    padding-right: 45px;
+.password-box input {
+    margin-bottom: 0;
 }
 
-
-.password-input i {
+.password-box i {
     position: absolute;
 
-    right: 15px;
-    top: 50%;
+    right: 14px;
+    top: 12px;
 
-    transform: translateY(-50%);
-
-    color: #777;
-
-    font-size: 14px;
+    color: #8b949e;
 
     cursor: pointer;
 }
 
 
-/* ================= FORGOT PASSWORD ================= */
+/* ================= OPTIONS ================= */
 
-.forgot-section {
+.options {
     display: flex;
-
     justify-content: space-between;
 
-    align-items: center;
-
-    margin-top: 5px;
+    margin-top: 32px;
     margin-bottom: 32px;
 }
 
-
-.forgot-section a {
+.options a {
     text-decoration: none;
 
-    font-size: 13px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 
-    color: #77808c;
+    color: #7b8794;
 }
 
-
-.forgot-section .otp {
-    color: #345da9;
+.options a:last-child {
+    color: #3157a4;
 }
 
 
@@ -187,30 +155,22 @@ body {
     height: 40px;
 
     border: none;
+    border-radius: 9px;
 
-    border-radius: 8px;
-
-    background: linear-gradient(
-        90deg,
-        #345bad,
-        #2e58b6
-    );
+    background-color: #3157ad;
 
     color: white;
 
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
 
     cursor: pointer;
 
     transition: 0.3s;
 }
 
-
 .signin-btn:hover {
-    opacity: 0.95;
-
-    transform: translateY(-1px);
+    background-color: #25468f;
 }
 
 
@@ -219,17 +179,16 @@ body {
 .create-account {
     text-align: right;
 
-    margin-top: 18px;
+    margin-top: 20px;
     margin-bottom: 24px;
 
-    font-size: 13px;
+    color: #7b8794;
 
-    color: #77808c;
+    font-size: 14px;
 }
 
-
 .create-account a {
-    color: #315ca9;
+    color: #3157ad;
 
     text-decoration: underline;
 }
@@ -240,66 +199,42 @@ body {
 .google-btn {
     width: 100%;
     height: 40px;
-
-    border: 1px solid #d2d2d2;
-
+    border: 1px solid #ccc;
     border-radius: 10px;
-
     background: white;
-
+    font-size: 16px;
     display: flex;
-
-    align-items: center;
     justify-content: center;
-
-    gap: 10px;
-
-    font-size: 14px;
-
-    color: #333;
-
+    align-items: center;
+    gap: 12px;
     cursor: pointer;
-
-    transition: 0.3s;
 }
-
-
-.google-btn:hover {
-    background: #f7f7f7;
-}
-
-
-/* GOOGLE IMAGE SIZE FIX */
 
 .google-btn img {
-    width: 20px !important;
-    height: 20px !important;
-
-    object-fit: contain;
-
-    display: block;
-
-    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
 }
+
+
+
+
 
 
 /* ================= RIGHT SIDE ================= */
 
-.login-right {
+.testimonial-section {
     width: 42%;
 
     display: flex;
 
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     background: linear-gradient(
         135deg,
-        #3199c5 0%,
-        #4562d4 100%
+        #2595c7,
+        #5154c9
     );
-
-    border-radius: 0 18px 18px 0;
 }
 
 
@@ -308,57 +243,56 @@ body {
 .testimonial {
     width: 300px;
 
-    padding: 14px 20px 10px;
+    padding: 14px 20px 12px;
 
     text-align: center;
 
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.35);
 
-    background: rgba(255, 255, 255, 0.25);
-
-    backdrop-filter: blur(10px);
-
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
 }
-
 
 .testimonial p {
-    font-size: 16px;
+    font-size: 17px;
 
-    font-weight: 600;
+    line-height: 26px;
 
-    line-height: 1.65;
+    font-weight: 500;
 
-    color: #18232f;
+    color: #172033;
 
-    margin-bottom: 12px;
+    letter-spacing: 0.3px;
 }
 
 
-.testimonial img {
-    width: 40px;
-    height: 40px;
+/* ================= PROFILE ================= */
+
+.profile {
+    margin-top: 14px;
+}
+
+.profile img {
+    width: 38px;
+    height: 38px;
 
     border-radius: 50%;
 
-    border: 3px solid #f5b6c2;
+    border: 4px solid #f3c7cf;
 
     object-fit: cover;
-
-    margin-bottom: 5px;
 }
-
 
 .testimonial h3 {
-    font-size: 14px;
+    margin-top: 10px;
 
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
 
-    color: #1e2a36;
+    color: #172033;
 }
 
 
-/* ================= TABLET RESPONSIVE ================= */
+/* ================= TABLET ================= */
 
 @media screen and (max-width: 1000px) {
 
@@ -369,61 +303,41 @@ body {
 }
 
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 
 @media screen and (max-width: 768px) {
 
-    .logo {
-        padding: 15px 20px;
+    .logo-section {
+        padding: 15px 25px;
     }
-
-
-    .logo img {
-        width: 65px;
-    }
-
 
     .login-container {
-        width: 92%;
+        width: 90%;
 
-        min-height: auto;
+        margin-top: 30px;
 
-        margin: 40px auto;
+        flex-direction: column;
 
-        display: block;
-
-        border-radius: 15px;
+        border-radius: 20px;
     }
 
-
-    .login-left {
+    .login-form {
         width: 100%;
 
-        padding: 40px 25px 45px;
+        padding: 40px 25px;
     }
 
+    .testimonial-section {
+        width: 100%;
 
-    /* MOBILE LA RIGHT SIDE HIDE */
+        min-height: 300px;
 
-    .login-right {
-        display: none;
+        padding: 40px 20px;
     }
 
-
-    .login-left h1 {
-        font-size: 26px;
-
-        margin-bottom: 40px;
-    }
-
-
-    .forgot-section {
-        margin-bottom: 28px;
-    }
-
-
-    .create-account {
-        text-align: center;
+    .testimonial {
+        width: 100%;
+        max-width: 300px;
     }
 
 }
@@ -431,38 +345,21 @@ body {
 
 /* ================= SMALL MOBILE ================= */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+
+    .testimonial-section {
+        display: none;
+    }
 
     .login-container {
-        width: 94%;
-
-        margin-top: 25px;
+        width: 90%;
+        margin-top: 30px;
+        display: block;
     }
 
-
-    .login-left {
-        padding: 35px 18px 40px;
-    }
-
-
-    .login-left h1 {
-        font-size: 24px;
-    }
-
-
-    .forgot-section a {
-        font-size: 12px;
-    }
-
-
-    .google-btn {
-        font-size: 13px;
-    }
-
-
-    .google-btn img {
-        width: 18px !important;
-        height: 18px !important;
+    .login-form {
+        width: 100%;
+        padding: 40px 25px;
     }
 
 }
