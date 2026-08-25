@@ -1,0 +1,217 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+body {
+    background-color: #f8fafc;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    max-width: 1150px;
+    width: 100%;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(26, 23, 23, 0.04);
+}
+
+/* Banner Styling */
+.card-banner {
+    height: 200px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.banner-python {
+    background: #ffffff;
+}
+
+.banner-dsa {
+    background: linear-gradient(180deg, #ffffff 0%, #fce7f3 100%);
+}
+
+.banner-aws {
+    background: linear-gradient(180deg, #ffffff 0%, #f3e8ff 50%, #ffedd5 100%);
+}
+
+.banner-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.banner-title .highlight {
+    color: #8b5cf6;
+}
+
+.banner-subtitle {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #334155;
+    margin-top: 2px;
+}
+
+.banner-tag {
+    background: #fee2e2;
+    color: #ef4444;
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin: 6px 0;
+}
+
+.banner-desc-text {
+    font-size: 0.65rem;
+    color: #64748b;
+    margin: 6px 0;
+    line-height: 1.2;
+}
+
+.banner-pill {
+    display: flex;
+    gap: 12px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.6rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.banner-pill div {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-pill strong {
+    color: #0f172a;
+}
+
+.banner-btn {
+    background: #1e293b;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.banner-cards-graphic {
+    display: flex;
+    gap: 6px;
+    margin-top: 25px;
+}
+
+.mini-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 12px 10px;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Content Body */
+.card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.author {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+.course-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.meta-info {
+    display: flex;
+    gap: 12px;
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.8rem;
+    color: #475569;
+    line-height: 1.4;
+    flex-grow: 1;
+    margin-bottom: 16px;
+}
+
+/* Footer Section */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 12px;
+}
+
+.price-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.current-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.original-price {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+.buy-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 8px 32px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.buy-btn:hover {
+    background-color: #1d4ed8;
+}
